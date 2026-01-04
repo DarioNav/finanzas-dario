@@ -317,25 +317,6 @@
             margin-bottom: 0.25rem;
         }
 
-        .nav-item .nav-expense-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            margin: 0 auto 0.25rem auto;
-            background: var(--danger);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 1;
-        }
-
-        .nav-item.active .nav-expense-icon {
-            background: var(--danger);
-        }
-
         /* Lucide Icons */
         .nav-item .icon i {
             width: 22px;
@@ -1109,7 +1090,9 @@
 
         .category-actions {
             display: flex;
-            gap: 0.5rem;
+            align-items: center;
+            gap: 0.25rem;
+            flex-shrink: 0;
         }
 
         .category-actions button {
@@ -1117,7 +1100,10 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
-            padding: 0.25rem;
+            padding: 0.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Expense Item */
@@ -2101,7 +2087,7 @@
                     Presupuesto
                 </div>
                 <div class="nav-item" data-section="expenses">
-                    <span class="icon nav-expense-icon">−</span>
+                    <span class="icon"><i data-lucide="receipt"></i></span>
                     Gastos
                 </div>
                 <div class="nav-item" data-section="goals">
@@ -2339,10 +2325,6 @@
                         </div>
                         <div id="budgetList"></div>
                     </div>
-
-                    <button class="btn btn-secondary" onclick="copyPreviousMonth()" style="margin-top: 0.5rem;">
-                        <i data-lucide="copy" class="btn-icon"></i> Copiar mes anterior
-                    </button>
                 </section>
 
                 <!-- Settings Section -->
